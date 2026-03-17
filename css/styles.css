@@ -25,25 +25,58 @@ h1,h2,h3,h4,h5,h6{
     background-color: var(--azul-principal);
     color: var(--blanco);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
 }
-.header .navegacion{
+.navegacion{
     width: 100%;
 }
-
-.header #logo{
+.contenedor-logo{
+    background-color: var(--blanco);
+}
+@media (max-width: 768px){
+    .contenedor-logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+#logo{
     width: 250px;
     margin: 0;
     padding: 10px;
     
 }
-.header .navegacion ul{
+.navegacion ul{
     display: flex;
     max-width: 100%;
     justify-content: space-around;
     list-style: none;
-    margin-inline-start: 0px;
+    padding: 0;
+}
+#menu-toggle{
+    display: none;
+}
+@media (max-width: 500px) {
+    .navegacion{
+        position: relative;
+        min-height: 30px;
+    }
+    .navegacion ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;;
+    }
+    .navegacion ul{
+        display: none;
+    }
+    #menu-toggle{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
 }
 @media (max-width: 768px){
     .header{
