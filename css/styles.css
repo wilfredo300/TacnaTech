@@ -24,35 +24,32 @@ h1,h2,h3,h4,h5,h6{
 .header{
     background-color: var(--azul-principal);
     color: var(--blanco);
-    display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
 }
 .navegacion{
     width: 100%;
 }
 .contenedor-logo{
     background-color: var(--blanco);
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-@media (max-width: 768px){
-    .contenedor-logo{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-}
+
 #logo{
     width: 250px;
     margin: 0;
     padding: 10px;
     
 }
-.navegacion ul{
+.menu{
     display: flex;
     max-width: 100%;
     justify-content: space-around;
     list-style: none;
-    padding: 0;
+    padding: 10px 0;
+    margin: 0;
 }
 #menu-toggle{
     display: none;
@@ -62,14 +59,12 @@ h1,h2,h3,h4,h5,h6{
         position: relative;
         min-height: 30px;
     }
-    .navegacion ul{
+    .menu{
         flex-direction: column;
         align-items: center;
         gap: 5px;;
     }
-    .navegacion ul{
-        display: none;
-    }
+    
     #menu-toggle{
         display: block;
         cursor: pointer;
@@ -78,13 +73,7 @@ h1,h2,h3,h4,h5,h6{
         right: 10px;
     }
 }
-@media (max-width: 768px){
-    .header{
-        flex-direction: column;
-        align-items: center;
-    }
-    
-}
+
 .header a{
     color: var(--blanco);
     text-decoration: none;
@@ -110,7 +99,12 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 10px;
     text-align: center;
 }
-#div1{
+@media (min-width: 900px) {
+    .info-hero{
+        padding: 50px;
+    }
+}
+.boton{
     background-color: var(--rojo-acento-claro);
     padding: 10px 20px;
     color: var(--blanco);
@@ -119,8 +113,38 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 5px;
     border: none;
 }
-#div1:hover{
+.boton:hover{
 /*     background-color: var(--rojo-acento-hover); 
  */    cursor: pointer ;
     transform: scale(1.2);
 }   
+@media (max-width: 500px) {
+    .hidden{
+        display: none;
+    }
+}
+
+section{
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contenido-nosotros{
+    display: flex;
+    gap: 10px;
+    
+}
+.contenido-nosotros img{
+    max-width: 50%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+@media (max-width: 500px) {
+    .contenido-nosotros{
+        flex-direction: column;
+    }
+    .contenido-nosotros img{
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
