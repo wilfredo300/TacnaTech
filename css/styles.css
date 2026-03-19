@@ -12,11 +12,10 @@ html{
     box-sizing: border-box;
     color: var(--gris-texto);
     padding: 0;
-    margin: 0;
+    margin: 0; 
 }
 *, *:before, *:after{
     box-sizing: inherit;
-
 }
 h1,h2,h3,h4,h5,h6{
     color: var(--azul-principal);
@@ -24,8 +23,6 @@ h1,h2,h3,h4,h5,h6{
 .header{
     background-color: var(--azul-principal);
     color: var(--blanco);
-    justify-content: space-around;
-    align-items: center;
 }
 .navegacion{
     width: 100%;
@@ -111,6 +108,8 @@ h1,h2,h3,h4,h5,h6{
     transform: scale(1);
     transition: all 0.3s ease;
     border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
     border: none;
 }
 .boton:hover{
@@ -125,7 +124,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 section{
-    padding: 20px;
+    padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -147,4 +146,86 @@ section{
         max-width: 100%;
         object-fit: cover;
     }
+}
+.texto-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+/* Productos destacados */
+.productos-destacados, .servicios{
+    padding: 20px;
+    text-align: center;
+}
+.contenedor-productos, .contenedor-servicios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.producto-card, .servicio-card{
+    background-color: var(--gris-claro);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+.producto-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.contenedor-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+.boton-seccion{
+    /* centramos el boton */
+    display: inline-block;
+    margin: 20px auto;
+}
+/* servicios */
+.servicios .servicio-card li{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+
+footer{
+    background-color: var(--azul-principal);
+    width: 100%;
+    padding: 30px 0 5px 0;
+    text-align: center;
+    color: var(--blanco);
+}
+#logotipo {
+    width: 180px;
+    margin-bottom: 10px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+    transition: 0.3s;
+}
+.social a:hover {
+    background-color: #E31C2D; /* rojo acento */
+    transform: translateY(-3px);
 }
